@@ -12,7 +12,7 @@ notebook:
 
 sync:
 	git fetch --tags --prune && \
-	git merge FETCH_HEAD \
+	git merge FETCH_HEAD && \
 	git add --all && \
 	git commit --message="auto-added changes" && \
 	git push
