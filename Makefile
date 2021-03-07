@@ -1,8 +1,6 @@
 image:
 	docker build --tag jupyter-java - < Dockerfile
 
-	# docker build https://raw.githubusercontent.com/awslabs/djl/master/jupyter/Dockerfile
-
 notebook:
 	docker run \
 	--rm \
