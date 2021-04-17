@@ -20,6 +20,10 @@ RUN git clone https://github.com/frankfliu/IJava.git
 RUN cd IJava/ && ./gradlew installKernel && cd .. && rm -rf IJava/
 RUN rm -rf ~/.gradle
 
+# notebook extensions
+RUN pip3 install https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tarball/master
+RUN jupyter contrib nbextension install --user
+
 WORKDIR /home/jupyter
 
 ENV LANG en_US.UTF-8
