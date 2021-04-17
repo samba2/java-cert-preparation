@@ -23,6 +23,7 @@ RUN rm -rf ~/.gradle
 # notebook extensions
 RUN pip3 install https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tarball/master
 RUN jupyter contrib nbextension install --user
+# TODO check if the installed extensions are actually a git repo -> remove .git* files
 
 WORKDIR /home/jupyter
 
